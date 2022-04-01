@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncardoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 17:41:01 by ncardoso          #+#    #+#             */
-/*   Updated: 2022/04/01 14:13:52 by ncardoso         ###   ########.fr       */
+/*   Created: 2022/04/01 10:53:02 by ncardoso          #+#    #+#             */
+/*   Updated: 2022/04/01 10:59:19 by ncardoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-char	*ft_strrchr(const char *str, int c)
+int ft_strlen(char *str)
 {
-	int	i;
+    int i;
+    i = 0;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	while (i >= 0)
-	{
-		if (str[i] == (char) c)
-		{
-			return ((char *)(str + i));
-		}
-		i--;
-	}
-	return (NULL);
+    while(str[i] != 0)
+    {
+        i++;
+    }
+    return (i);
 }
+
+/*int main()
+{
+    printf("%d", ft_strlen("nuno"));
+}*/
